@@ -13,7 +13,11 @@
     "build:web": "craco build",
     "build:electron": "env-cmd -f .env.electron craco build",
     "watch:electron": "npm-watch",
-    "test": "craco test",
+    "test": "craco test --coverage",
+    "test:no-watch": "craco test --coverage --watchAll=false",
+    "test:badges": "jest-coverage-badges",
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
+    "lint:fix": "eslint './src/**/*.{ts,tsx}' --fix ",
     "eject": "react-scripts eject",
     "pack": "electron-builder --dir",
     "dist": "electron-builder"
@@ -31,14 +35,15 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "@craco/craco": "^5.6.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "@craco/craco": "^5.6.1",
     "@types/jest": "24.0.21",
     "@types/node": "12.12.3",
     "@types/react": "16.9.11",
     "@types/react-dom": "16.9.3",
+    "classnames": "^2.2.6",
     "electron": "^7.0.0",
     "electron-builder": "^22.1.0",
     "env-cmd": "^10.0.1",
@@ -46,6 +51,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0",
+    "tailwindcss": "1.2.0-canary.5",
     "typescript": "3.6.4"
   },
   "repository": {
@@ -56,5 +62,27 @@
     "D&D,RPG-game"
   ],
   "author": "Mehrad Rousta <mehrad@gmail.com> (https://jourlog.xyz/)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.0.5",
+    "@types/classnames": "^2.2.9",
+    "lint-staged": "^10.0.2",
+    "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test:no-watch && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|jsx)": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.+(json|css|md)": [
+      "prettier --write",
+      "git add"
+    ]
+  }
 }
