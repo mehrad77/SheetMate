@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 
-interface IVitals {}
+interface IGear {}
 
-const Vitals: FC<IVitals> = ({ children }) => {
+const Gear: FC<IGear> = ({ children }) => {
   const classes = classNames({});
 
   return <div className={`${classes}`}>{children}</div>;
 };
 
-export default Vitals;
+export default Gear;
