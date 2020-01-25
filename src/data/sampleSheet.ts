@@ -147,7 +147,8 @@ const sampleCharacterSheet: ICharacterSheet = {
       persuasion: {
         proficiency: 'proficient'
       }
-    }
+    },
+    passivePerception: 18
   },
   money: {
     CP: 0,

@@ -45,4 +45,5 @@ export interface ISkils {
     performance: ISkill;
     persuasion: ISkill;
   };
+  passivePerception: number;
 }

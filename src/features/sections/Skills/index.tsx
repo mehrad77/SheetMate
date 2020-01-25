@@ -5,7 +5,7 @@ import { ISkils } from '../../../datatypes';
 
 interface ISkillsProps extends ISkils {}
 
-const Skills: FC<ISkillsProps> = ({ abilities, skills, proficiencyBonus }) => {
+const Skills: FC<ISkillsProps> = ({ abilities, skills, proficiencyBonus, passivePerception }) => {
   const classes = classNames({
     SkillsSection: true,
     'bg-red-700': true
