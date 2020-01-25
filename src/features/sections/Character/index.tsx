@@ -22,7 +22,8 @@ const Character: FC<ICharacterProps> = ({
   languages
 }) => {
   const classes = classNames({
-    CharacterSection: true
+    CharacterSection: true,
+    'bg-yellow-500': true
   });
 
   return (
