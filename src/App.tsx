@@ -1,7 +1,7 @@
 import React from 'react';
+import { Navigation } from './components';
 import { Sheet } from './features';
 import { sampleCharacterSheet } from './data/sampleSheet';
-import Navigation from './components/Nav';
 // import TestFs from './model/TestFs';
 
 const App: React.FC = () => {
