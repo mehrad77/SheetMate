@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import classNames from 'classnames';
 import { Section } from '../../../components';
 import { ISkils } from '../../../datatypes';
+import Abilty from './Abiliy';
 
 interface ISkillsProps extends ISkils {}
 
@@ -10,6 +11,7 @@ const Skills: FC<ISkillsProps> = ({ abilities, skills, proficiencyBonus, passive
     SkillsSection: true,
     'bg-red-700': true
   });
+
   return (
     <Section className={classes}>
       <span
@@ -24,6 +26,14 @@ const Skills: FC<ISkillsProps> = ({ abilities, skills, proficiencyBonus, passive
       >
         Skills
       </span>
+      <div className="flex flex-row w-full">
+        {Object.keys(abilities)?.map(abiltyName => (
+          // @ts-ignore
+          <Abilty title={abiltyName} abilty={abilities[abiltyName]} />
+        ))}
+
+        <div className=""></div>
+      </div>
     </Section>
   );
 };

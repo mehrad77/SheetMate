@@ -1,4 +1,4 @@
-interface IAbility {
+export interface IAbility {
   baseNum: number;
   addedNum: number;
   advantage?: 'advantage' | 'disadvantage';
