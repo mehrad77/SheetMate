@@ -21,30 +21,38 @@ const Character: FC<ICharacterProps> = ({
   languages
 }) => {
   const classes = classNames({
-    'p-2 flex flex-row bg-yellow-300 w-full': true
+    'p-2 flex flex-col md:flex-row bg-yellow-500 w-full shadow-xl': true
   });
 
   return (
     <div className={` ${classes}`}>
-      <div className=" w-1/4">
+      <div className="md:w-1/4">
         <img className="w-48 p-4" src="/bard.png" alt="class icon" />
       </div>
-      <div className="flex flex-col w-3/4">
-        <div className="flex flex-row">
-          <h1>{name}</h1>
+      <div className="flex flex-col md:w-3/4">
+        <div className="align-baseline flex justify-between  text-left">
+          <h1 className="inline pr-2">{name}</h1>
+          <div>
+            <div className="inline-flex flex-col justify-center items-center px-2 mx-2 bg-orange-800 text-white shadow">
+              <span className="text-2xl">{alignment}</span>
+              <span className="text-sm">Alignment</span>
+            </div>
+            <div className="inline-flex flex-col justify-center items-center px-2 mx-2 bg-orange-800 text-white shadow">
+              <span className="text-2xl">{movementSpeed}</span>
+              <span className="text-sm">Speed</span>
+            </div>
+            <div className="inline-flex flex-col justify-center items-center px-2 mx-2 bg-orange-800 text-white shadow">
+              <span className="text-2xl">{level}</span>
+              <span className="text-sm">Level</span>
+            </div>
+          </div>
         </div>
         <div className="flex flex-row">
-          <Box title="Alignment">{alignment}</Box>
           {xp && <Box title="XP">{xp}</Box>}
-          <Box title="Level">{level}</Box>
-          <Box title="Sex">{sex}</Box>
-          <Box title="height">{height}</Box>
-          <Box title="weight">{weight}</Box>
-          <Box title="size">{size}</Box>
+          {sex} &bull; {height}cm &bull; {weight}km &bull; {size} creature
         </div>
         <div className="flex flex-row">
           <Box title="inspiration">{inspiration}</Box>
-          <Box title="movementSpeed">{movementSpeed}</Box>
           <Box title="racialAbilities">{racialAbilities}</Box>
         </div>
         <div className="flex flex-row">
