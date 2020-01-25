@@ -1,19 +1,23 @@
 import React from 'react';
 import { Sheet } from './features';
 import { sampleCharacterSheet } from './data/sampleSheet';
+import Navigation from './components/Nav';
 // import TestFs from './model/TestFs';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Sheet character={sampleCharacterSheet} />
-      {/* <textarea
+    <>
+      <Navigation />
+      <div className="container mx-auto px-4 mt-2">
+        <Sheet character={sampleCharacterSheet} />
+        {/* <textarea
           className="bg-green-500"
           value={TestFs.getDirectoryListing()}
           readOnly
           rows={20}
         /> */}
-    </div>
+      </div>
+    </>
   );
 };
 
