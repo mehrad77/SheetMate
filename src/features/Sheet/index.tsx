@@ -30,7 +30,7 @@ const Sheet: FC<ISheet> = ({ character }) => {
     <div className={`${classes}`}>
       <Character {...character.character} />
       {/* <ClassFeature /> */}
-      <Vitals />
+      <Vitals {...character.vitals} />
       <Gear />
       <Skills />
       <Money />

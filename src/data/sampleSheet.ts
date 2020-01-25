@@ -3,6 +3,8 @@ import { ICharacterSheet } from '../datatypes';
 const sampleCharacterSheet: ICharacterSheet = {
   character: {
     name: 'Gizzard Jojor',
+    race: 'Half-elf',
+    class: 'Bard',
     alignment: 'NG',
     level: 3,
     age: 30,

@@ -1,12 +1,15 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
+import { IVitals } from '../../../datatypes';
 
-interface IVitals {}
+interface IVitalsProps extends IVitals {}
 
-const Vitals: FC<IVitals> = ({ children }) => {
-  const classes = classNames({});
+const Vitals: FC<IVitalsProps> = ({ maxHP, currentHP, tempHP, hitDice, deathSaves, things }) => {
+  const classes = classNames({
+    'p-2 flex flex-row bg-yellow-700 w-full': true
+  });
 
-  return <div className={`${classes}`}>{children}</div>;
+  return <div className={`${classes}`}></div>;
 };
 
 export default Vitals;

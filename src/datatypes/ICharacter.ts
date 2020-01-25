@@ -1,5 +1,5 @@
-type TAlignment = 'LG' | 'NG' | 'CG' | 'LN' | 'NN' | 'CN' | 'LE' | 'NE' | 'CE';
-type TLevel =
+export type TAlignment = 'LG' | 'NG' | 'CG' | 'LN' | 'NN' | 'CN' | 'LE' | 'NE' | 'CE';
+export type TLevel =
   | 1
   | 2
   | 3
@@ -20,7 +20,7 @@ type TLevel =
   | 18
   | 19
   | 20;
-type TSize =
+export type TSize =
   | 'fine'
   | 'diminutive'
   | 'tiny'
@@ -32,7 +32,7 @@ type TSize =
   | 'colossal'
   | 'colossal +';
 
-interface ILanguages {
+export interface ILanguages {
   // Standard Languages
   common?: boolean;
   dwarvish?: boolean;
@@ -45,9 +45,38 @@ interface ILanguages {
   // TODO: add other languages
 }
 
+export type TRace =
+  | 'Human'
+  | 'Elf'
+  | 'Halfling'
+  | 'Dwarf'
+  | 'Tiefling'
+  | 'Dragonborn'
+  | 'Eladrin'
+  | 'Half-orc'
+  | 'Gnome'
+  | 'Half-elf';
+
+export type TClass =
+  | 'Artificer'
+  | 'Barbarian'
+  | 'Bard'
+  | 'Cleric'
+  | 'Druid'
+  | 'Fighter'
+  | 'Monk'
+  | 'Paladin'
+  | 'Ranger'
+  | 'Wizard'
+  | 'Sorcerer'
+  | 'Rogue'
+  | 'Warlock';
+
 export interface ICharacter {
   // 1. character section
   name: string;
+  race: TRace;
+  class: TClass;
   alignment: TAlignment;
   level: TLevel;
   xp?: number;

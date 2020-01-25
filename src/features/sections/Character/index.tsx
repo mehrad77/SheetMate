@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
-import { Box } from '../../../components';
+import { Box, LevelBox } from '../../../components';
 import { ICharacter } from '../../../datatypes';
+import Language from './Language';
 
 interface ICharacterProps extends ICharacter {}
 
@@ -30,36 +31,32 @@ const Character: FC<ICharacterProps> = ({
         <img className="w-48 p-4" src="/bard.png" alt="class icon" />
       </div>
       <div className="flex flex-col md:w-3/4">
-        <div className="align-baseline flex justify-between  text-left">
+        <div className="align-baseline flex justify-between text-left">
           <h1 className="inline pr-2">{name}</h1>
           <div>
-            <div className="inline-flex flex-col justify-center items-center px-2 mx-2 bg-orange-800 text-white shadow">
-              <span className="text-2xl">{alignment}</span>
-              <span className="text-sm">Alignment</span>
-            </div>
-            <div className="inline-flex flex-col justify-center items-center px-2 mx-2 bg-orange-800 text-white shadow">
-              <span className="text-2xl">{movementSpeed}</span>
-              <span className="text-sm">Speed</span>
-            </div>
-            <div className="inline-flex flex-col justify-center items-center px-2 mx-2 bg-orange-800 text-white shadow">
-              <span className="text-2xl">{level}</span>
-              <span className="text-sm">Level</span>
-            </div>
+            <LevelBox title="Alignment" value={alignment} />
+            <LevelBox title="Speed" value={movementSpeed} />
+            <LevelBox title="Level" value={level} />
           </div>
         </div>
-        <div className="flex flex-row">
-          {xp && <Box title="XP">{xp}</Box>}
-          {sex} &bull; {height}cm &bull; {weight}km &bull; {size} creature
+        <div className="flex flex-row capitalize justify-between my-2">
+          {/* {xp && <Box title="XP">{xp}</Box>} */}
+          <div>
+            {sex} &bull; {size} creature &bull; {height}cm &bull; {weight}km
+          </div>
+          <div>
+            <input className="mr-2 leading-tight" type="checkbox" checked={inspiration} />
+            <span className="text-sm">Inspiration</span>
+          </div>
         </div>
-        <div className="flex flex-row">
-          <Box title="inspiration">{inspiration}</Box>
-          <Box title="racialAbilities">{racialAbilities}</Box>
+        <div className="flex flex-row capitalize">
+          <Language languages={languages} />
         </div>
-        <div className="flex flex-row">
-          {Object.keys(languages)?.map(language => (
-            <span key={language}> {language} </span>
-          ))}
-        </div>
+        {racialAbilities && (
+          <div>
+            <p>{racialAbilities}</p>
+          </div>
+        )}
       </div>
     </div>
   );
