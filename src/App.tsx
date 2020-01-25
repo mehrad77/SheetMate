@@ -1,18 +1,18 @@
 import React from 'react';
-
-import TestFs from './model/TestFs';
+import { Sheet } from './features';
+import { sampleCharacterSheet } from './data/sampleSheet';
+// import TestFs from './model/TestFs';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <textarea
+      <Sheet character={sampleCharacterSheet} />
+      {/* <textarea
           className="bg-green-500"
           value={TestFs.getDirectoryListing()}
           readOnly
           rows={20}
-        />
-      </header>
+        /> */}
     </div>
   );
 };
