@@ -20,4 +20,5 @@ interface ICharacterSheet {
   // 12. Spells
 }
 
+// @ts-ignore
 export { ICharacterSheet, ICharacter, IMoney, IVitals, ISkils, IBackground };

@@ -1,9 +1,11 @@
+type THitDice = 'd6' | 'd8' | 'd10' | 'd12';
+
 export interface IVitals {
   // 3. vitals section
   maxHP: number;
   currentHP: number;
   tempHP: number;
-  hitDice: 'd6' | 'd8' | 'd10' | 'd12';
+  hitDice: THitDice;
   deathSaves?: { 1: boolean; 2: boolean; 3: boolean };
   things: {
     blinded?: boolean;
