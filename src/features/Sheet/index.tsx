@@ -32,7 +32,7 @@ const Sheet: FC<ISheet> = ({ character }) => {
       {/* <ClassFeature /> */}
       <Vitals {...character.vitals} />
       <Gear />
-      <Skills />
+      <Skills {...character.skills} />
       <Money />
       <Equipment />
       <Attuned />

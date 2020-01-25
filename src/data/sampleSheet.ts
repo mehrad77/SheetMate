@@ -43,7 +43,7 @@ const sampleCharacterSheet: ICharacterSheet = {
       unconscious: false
     }
   },
-  skils: {
+  skills: {
     abilities: {
       STR: {
         baseNum: 12,

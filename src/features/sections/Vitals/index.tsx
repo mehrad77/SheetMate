@@ -2,6 +2,10 @@ import React, { FC } from 'react';
 import classNames from 'classnames';
 import { IVitals } from '../../../datatypes';
 import { Section, LevelBox } from '../../../components';
+import DeathSaves from './DeathSaves';
+import HitPoint from './CurrentHP';
+import TempHP from './TempHP';
+import Conditions from './Conditions';
 
 interface IVitalsProps extends IVitals {}
 
@@ -26,40 +30,11 @@ const Vitals: FC<IVitalsProps> = ({ maxHP, currentHP, tempHP, hitDice, deathSave
         Vitals
       </span>
       <div className="flex flex-row w-full">
-        <div className="md:w-2/6 capitalize flex flex-col items-center">
-          <strong>Conditions</strong>
-          <ul className="text-left" style={{ columns: 2 }}>
-            {Object.keys(things)?.map(thing => {
-              // @ts-ignore
-              return <>{things[thing] === true && <li>{thing}</li>}</>;
-            })}
-          </ul>
-        </div>
+        <Conditions conditions={things} />
         <div className="md:w-2/6 flex flex-col py-2 justify-center items-center">
-          <div className="bg-yellow-500 -mt-2 flex flex-col justify-center shadow-sm rounded-sm">
-            <span className="text-sm">Death Saves</span>
-            <div className="flex items-center">
-              <span className="text-xl px-1">◌</span>
-              <span className="text-lg pr-1">◌</span>
-              <span className="text-sm pr-1">◌</span>
-              <span>|</span>
-              <span className="text-sm pl-1">◌</span>
-              <span className="text-lg pl-1">◌</span>
-              <span className="text-xl px-1">◌</span>
-            </div>
-          </div>
-          <div className="bg-yellow-400 px-8 py-3 z-10 flex items-baseline shadow-md rounded-sm">
-            <span className="text-6xl" style={{ display: 'contents' }}>
-              {currentHP}
-            </span>
-            <span className="text-3xl">/{maxHP}</span>
-          </div>
-          <div className="bg-yellow-500 px-4 pt-2 -mt-2 flex flex-col justify-center shadow-sm rounded-sm">
-            <span className="text-xl" style={{ display: 'contents' }}>
-              {tempHP}
-            </span>
-            <span className="text-sm">Temp</span>
-          </div>
+          <DeathSaves deathSaves={deathSaves} />
+          <HitPoint maxHP={maxHP} currentHP={currentHP} />
+          <TempHP tempHP={tempHP} />
         </div>
         <div className="md:w-2/6 flex justify-end">
           <div>

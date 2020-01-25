@@ -10,7 +10,7 @@ interface ICharacterSheet {
   // 2. class feature section
   vitals: IVitals;
   // 4. gears section
-  skils: ISkils;
+  skills: ISkils;
   // 6. money
   // 7. equipment
   // 8. attuned
