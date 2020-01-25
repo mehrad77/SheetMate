@@ -3,7 +3,9 @@
 module.exports = {
   theme: {
     extend: {
-      fontFamily: {}
+      fontFamily: {
+        serif: ['Alegreya']
+      }
     }
   },
   variants: {
