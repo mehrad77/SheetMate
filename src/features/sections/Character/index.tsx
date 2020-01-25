@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
-import { Box, LevelBox } from '../../../components';
+import { LevelBox, Section } from '../../../components';
 import { ICharacter } from '../../../datatypes';
 import Language from './Language';
 
@@ -22,11 +22,23 @@ const Character: FC<ICharacterProps> = ({
   languages
 }) => {
   const classes = classNames({
-    'p-2 flex flex-col md:flex-row bg-yellow-500 w-full shadow-xl': true
+    CharacterSection: true
   });
 
   return (
-    <div className={` ${classes}`}>
+    <Section className={classes}>
+      <span
+        style={{
+          rotate: '270deg',
+          position: 'absolute',
+          marginLeft: '-50px',
+          marginTop: '18px',
+          padding: '0px 5px'
+        }}
+        className="bg-yellow-500"
+      >
+        Character
+      </span>
       <div className="md:w-1/4">
         <img className="w-48 p-4" src="/bard.png" alt="class icon" />
       </div>
@@ -42,7 +54,7 @@ const Character: FC<ICharacterProps> = ({
         <div className="flex flex-row capitalize justify-between my-2">
           {/* {xp && <Box title="XP">{xp}</Box>} */}
           <div>
-            {sex} &bull; {size} creature &bull; {height}cm &bull; {weight}km
+            {age} years old &bull; {sex} &bull; {size} creature &bull; {height}cm &bull; {weight}km
           </div>
           <div>
             <input className="mr-2 leading-tight" type="checkbox" checked={inspiration} />
@@ -58,7 +70,7 @@ const Character: FC<ICharacterProps> = ({
           </div>
         )}
       </div>
-    </div>
+    </Section>
   );
 };
 
