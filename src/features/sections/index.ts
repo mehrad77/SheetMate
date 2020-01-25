@@ -9,4 +9,3 @@ export { default as Money } from './Money';
 export { default as Skills } from './Skills';
 export { default as Spells } from './Spells';
 export { default as Vitals } from './Vitals';
-export { BardCF } from './classFeatures';
