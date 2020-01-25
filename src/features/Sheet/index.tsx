@@ -20,11 +20,15 @@ interface ISheet {
 }
 
 const Sheet: FC<ISheet> = ({ character }) => {
-  const classes = classNames({});
-
+  const classes = classNames({
+    'w-full': true
+  });
+  if (!character) {
+    return <h1>You'r character is not defined.</h1>;
+  }
   return (
     <div className={`${classes}`}>
-      <Character />
+      <Character {...character.character} />
       {/* <ClassFeature /> */}
       <Vitals />
       <Gear />
