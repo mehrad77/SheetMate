@@ -26,8 +26,16 @@ const Vitals: FC<IVitalsProps> = ({ maxHP, currentHP, tempHP, hitDice, deathSave
         Vitals
       </span>
       <div className="flex flex-row w-full">
-        <div className="md:w-1/4"></div>
-        <div className="md:w-2/4 flex flex-col py-2 justify-center items-center">
+        <div className="md:w-2/6 capitalize flex flex-col items-center">
+          <strong>Conditions</strong>
+          <ul className="text-left" style={{ columns: 2 }}>
+            {Object.keys(things)?.map(thing => {
+              // @ts-ignore
+              return <>{things[thing] === true && <li>{thing}</li>}</>;
+            })}
+          </ul>
+        </div>
+        <div className="md:w-2/6 flex flex-col py-2 justify-center items-center">
           <div className="bg-yellow-500 -mt-2 flex flex-col justify-center shadow-sm rounded-sm">
             <span className="text-sm">Death Saves</span>
             <div className="flex items-center">
@@ -53,7 +61,7 @@ const Vitals: FC<IVitalsProps> = ({ maxHP, currentHP, tempHP, hitDice, deathSave
             <span className="text-sm">Temp</span>
           </div>
         </div>
-        <div className="md:w-1/4 flex justify-end">
+        <div className="md:w-2/6 flex justify-end">
           <div>
             <LevelBox title="HitDice" value={hitDice} />
           </div>
