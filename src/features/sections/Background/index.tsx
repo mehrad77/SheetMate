@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
-import { Section } from '../../../components';
+import { Section, BorderdBox, SectionTitle } from '../../../components';
 import { IBackground } from '../../../datatypes';
 
 interface IBackgroundProps extends IBackground {}
@@ -34,59 +34,31 @@ const Background: FC<IBackgroundProps> = ({
         Background
       </span>
       <div className="flex flex-col w-full text-left p-2">
-        <h3 className="mb-2">{backgroundName}</h3>
+        <SectionTitle title={backgroundName} />
         <div className="flex flex-row flex-wrap w-full">
-          <div className="md:w-3/6">
-            <p className="border-2 border-dashed border-yellow-800 p-2 m-2">
-              <strong className="text-lg">Trait</strong>
-              <br />
-              {trait}
-            </p>
+          <div className="md:w-3/6 lg:w-3/12">
+            <BorderdBox title="Trait">{trait}</BorderdBox>
           </div>
-          <div className="md:w-3/6">
-            <p className="border-2 border-dashed border-yellow-800 p-2 m-2">
-              <strong className="text-lg">Bond</strong>
-              <br />
-              {bond}
-            </p>
+          <div className="md:w-3/6 lg:w-3/12">
+            <BorderdBox title="Bond">{bond}</BorderdBox>
           </div>
-          <div className="md:w-3/6">
-            <p className="border-2 border-dashed border-yellow-800 p-2 m-2">
-              <strong className="text-lg">Ideal</strong>
-              <br />
-              {ideal}
-            </p>
+          <div className="md:w-3/6 lg:w-3/12">
+            <BorderdBox title="Ideal">{ideal}</BorderdBox>
           </div>
-          <div className="md:w-3/6">
-            <p className="border-2 border-dashed border-yellow-800 p-2 m-2">
-              <strong className="text-lg">Flaw</strong>
-              <br />
-              {flaw}
-            </p>
+          <div className="md:w-3/6 lg:w-3/12">
+            <BorderdBox title="Flaw">{flaw}</BorderdBox>
           </div>
         </div>
-        <h3 className="mb-2">Organisations</h3>
+        <SectionTitle title="Organisations" />
         <div className="flex flex-row flex-wrap w-full">
           <div className="sm:w-2/5">
-            <p className="border-2 border-dashed border-yellow-800 p-2 m-2">
-              <strong className="text-lg">Allies</strong>
-              <br />
-              {organisations.allies}
-            </p>
+            <BorderdBox title="Allies">{organisations.allies.join(', ')}</BorderdBox>
           </div>
           <div className="sm:w-2/5">
-            <p className="border-2 border-dashed border-yellow-800 p-2 m-2">
-              <strong className="text-lg">Enemies</strong>
-              <br />
-              {organisations.enemies}
-            </p>
+            <BorderdBox title="Enemies">{organisations.enemies}</BorderdBox>
           </div>
           <div className="sm:w-1/5">
-            <p className="border-2 border-dashed border-yellow-800 p-2 m-2">
-              <strong className="text-lg">Faction</strong>
-              <br />
-              {faction}
-            </p>
+            <BorderdBox title="Faction">{faction}</BorderdBox>
           </div>
         </div>
       </div>
