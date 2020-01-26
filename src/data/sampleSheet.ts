@@ -76,76 +76,79 @@ const sampleCharacterSheet: ICharacterSheet = {
         prifucientSave: true
       }
     },
-    proficiencyBonus: 3,
+    proficiencyBonus: 2,
     skills: {
-      strength: {
-        proficiency: 'half-proficient'
-      },
-      athletics: {
-        proficiency: 'half-proficient'
-      },
-      dexterity: {
-        proficiency: 'half-proficient'
-      },
       acrobatics: {
-        proficiency: 'half-proficient'
-      },
-      sleightOfHand: {
-        proficiency: 'half-proficient'
-      },
-      stealth: {
-        proficiency: 'expert'
-      },
-      intelligence: {
-        proficiency: 'half-proficient'
-      },
-      arcana: {
-        proficiency: 'half-proficient'
-      },
-      history: {
-        proficiency: 'half-proficient'
-      },
-      investigation: {
-        proficiency: 'half-proficient'
-      },
-      nature: {
-        proficiency: 'half-proficient'
-      },
-      religion: {
-        proficiency: 'half-proficient'
-      },
-      wisdom: {
+        parent: 'DEX',
         proficiency: 'half-proficient'
       },
       animalHandling: {
+        parent: 'WIS',
         proficiency: 'half-proficient'
       },
-      insight: {
+      arcana: {
+        parent: 'INT',
         proficiency: 'half-proficient'
       },
-      medicine: {
-        proficiency: 'half-proficient'
-      },
-      perception: {
-        proficiency: 'proficient'
-      },
-      survival: {
-        proficiency: 'half-proficient'
-      },
-      charisma: {
+      athletics: {
+        parent: 'STR',
         proficiency: 'half-proficient'
       },
       deception: {
+        parent: 'CHA',
+        proficiency: 'half-proficient'
+      },
+      history: {
+        parent: 'INT',
+        proficiency: 'half-proficient'
+      },
+      insight: {
+        parent: 'WIS',
         proficiency: 'half-proficient'
       },
       intimidation: {
+        parent: 'INT',
+        proficiency: 'proficient'
+      },
+      investigation: {
+        parent: 'INT',
+        proficiency: 'half-proficient'
+      },
+      medicine: {
+        parent: 'WIS',
+        proficiency: 'half-proficient'
+      },
+      nature: {
+        parent: 'INT',
+        proficiency: 'half-proficient'
+      },
+      perception: {
+        parent: 'WIS',
         proficiency: 'proficient'
       },
       performance: {
+        parent: 'CHA',
         proficiency: 'expert'
       },
       persuasion: {
+        parent: 'CHA',
         proficiency: 'proficient'
+      },
+      religion: {
+        parent: 'INT',
+        proficiency: 'half-proficient'
+      },
+      sleightOfHand: {
+        parent: 'DEX',
+        proficiency: 'half-proficient'
+      },
+      stealth: {
+        parent: 'DEX',
+        proficiency: 'expert'
+      },
+      survival: {
+        parent: 'WIS',
+        proficiency: 'half-proficient'
       }
     },
     passivePerception: 18

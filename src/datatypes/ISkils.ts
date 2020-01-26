@@ -5,8 +5,11 @@ export interface IAbility {
   prifucientSave: boolean;
 }
 
-interface ISkill {
-  proficiency: 'half-proficient' | 'proficient' | 'expert';
+export type TAbilityName = 'STR' | 'DEX' | 'CON' | 'INT' | 'WIS' | 'CHA';
+
+export interface ISkill {
+  proficiency: 'none' | 'half-proficient' | 'proficient' | 'expert';
+  parent: TAbilityName;
 }
 
 export interface ISkils {
@@ -21,25 +24,20 @@ export interface ISkils {
   };
   proficiencyBonus: number;
   skills: {
-    strength: ISkill;
     athletics: ISkill;
-    dexterity: ISkill;
     acrobatics: ISkill;
     sleightOfHand: ISkill;
     stealth: ISkill;
-    intelligence: ISkill;
     arcana: ISkill;
     history: ISkill;
     investigation: ISkill;
     nature: ISkill;
     religion: ISkill;
-    wisdom: ISkill;
     animalHandling: ISkill;
     insight: ISkill;
     medicine: ISkill;
     perception: ISkill;
     survival: ISkill;
-    charisma: ISkill;
     deception: ISkill;
     intimidation: ISkill;
     performance: ISkill;

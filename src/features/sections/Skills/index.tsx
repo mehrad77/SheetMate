@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { Section } from '../../../components';
 import { ISkils } from '../../../datatypes';
 import Abilty from './Abiliy';
+import SkillsPoints from './SkillsPoints';
 
 interface ISkillsProps extends ISkils {}
 
@@ -26,13 +27,16 @@ const Skills: FC<ISkillsProps> = ({ abilities, skills, proficiencyBonus, passive
       >
         Skills
       </span>
-      <div className="flex flex-row w-full">
-        {Object.keys(abilities)?.map(abiltyName => (
-          // @ts-ignore
-          <Abilty title={abiltyName} abilty={abilities[abiltyName]} />
-        ))}
-
-        <div className=""></div>
+      <div className="flex flex-col w-full">
+        <div className="flex flex-row">
+          {Object.keys(abilities)?.map(abiltyName => (
+            // @ts-ignore
+            <Abilty title={abiltyName} abilty={abilities[abiltyName]} />
+          ))}
+        </div>
+        <div className="flex flex-col sm:flex-row flex-wrap pt-2">
+          <SkillsPoints abilities={abilities} skills={skills} proficiencyBonus={proficiencyBonus} />
+        </div>
       </div>
     </Section>
   );

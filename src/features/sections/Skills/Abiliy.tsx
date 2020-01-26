@@ -10,6 +10,7 @@ const Abilty: FC<IAbiltyProps> = ({ title, abilty }) => {
   const score = abilty.baseNum + abilty.addedNum;
   const modifier = parseInt(String((score - 10) / 2));
   const sign = Math.sign(modifier) === 1 ? '+' : Math.sign(modifier) === 0 ? '' : '-';
+
   return (
     <div className="w-1/6 flex flex-col items-center">
       <div className="flex flex-col bg-orange-500 w-16 p-1 rounded-b-full py-2 z-10 justify-between shadow-lg">
