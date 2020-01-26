@@ -18,7 +18,7 @@ const Money: FC<IMoneyProps> = ({ CP, SP, EP, GP, PP, treasures }) => {
           rotate: '270deg',
           position: 'absolute',
           marginLeft: '-43px',
-          marginTop: '4x',
+          marginTop: '7px',
           padding: '0px 5px'
         }}
         className="bg-orange-700 text-white"
