@@ -33,7 +33,7 @@ const Sheet: FC<ISheet> = ({ character }) => {
       <Vitals {...character.vitals} />
       <Gear />
       <Skills {...character.skills} />
-      <Money />
+      <Money {...character.money} />
       <Equipment />
       <Attuned />
       <Feats />
