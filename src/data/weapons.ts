@@ -1,8 +1,8 @@
 import { IWeapon } from '../datatypes';
 
 export enum WeaponName {
-  'Dagger',
-  'LightCrossbow' = 'Light Crossbow'
+  'Dagger' = 'Dagger',
+  'LightCrossbow' = 'LightCrossbow'
 }
 
 type TWeapons = {

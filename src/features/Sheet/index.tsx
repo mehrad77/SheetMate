@@ -4,7 +4,7 @@ import { ICharacterSheet } from '../../datatypes';
 import {
   Character,
   Vitals,
-  Gear,
+  Gears,
   Skills,
   Money,
   Equipment,
@@ -31,7 +31,7 @@ const Sheet: FC<ISheet> = ({ character }) => {
       <Character {...character.character} />
       {/* <ClassFeature /> */}
       <Vitals {...character.vitals} />
-      <Gear />
+      <Gears {...character.gears} />
       <Skills {...character.skills} />
       <Money {...character.money} />
       <Equipment />
