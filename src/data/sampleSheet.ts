@@ -45,7 +45,7 @@ const sampleCharacterSheet: ICharacterSheet = {
     }
   },
   gears: {
-    weapons: [WeaponName.Dagger, WeaponName.LightCrossbow],
+    weapons: [WeaponName.Dagger, WeaponName.LightCrossbow, WeaponName.UnarmedStrike],
     // 10 + armor + dex mod
     ac: 14,
     armomr: 'Studded Leather'

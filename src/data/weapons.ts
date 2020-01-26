@@ -2,7 +2,8 @@ import { IWeapon } from '../datatypes';
 
 export enum WeaponName {
   'Dagger' = 'Dagger',
-  'LightCrossbow' = 'LightCrossbow'
+  'LightCrossbow' = 'LightCrossbow',
+  'UnarmedStrike' = 'UnarmedStrike'
 }
 
 type TWeapons = {
@@ -10,6 +11,16 @@ type TWeapons = {
 };
 
 export const weapons: TWeapons = {
+  UnarmedStrike: {
+    name: 'Unarmed Strike',
+    range: 'melee',
+    damage: 0,
+    damagePlus: 0,
+    hitDC: 3,
+    damageType: 'bludgeoning',
+    note:
+      'You can punch, kick, head-butt, or use a similar forceful blow and deal bludgeoning damage equal to 1 + STR modifier'
+  },
   Dagger: {
     name: 'Dagger',
     range: 'melee',
