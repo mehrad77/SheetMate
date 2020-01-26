@@ -37,28 +37,42 @@ const Background: FC<IBackgroundProps> = ({
         <SectionTitle title={backgroundName} />
         <div className="flex flex-row flex-wrap w-full">
           <div className="md:w-3/6 lg:w-3/12">
-            <BorderdBox title="Trait">{trait}</BorderdBox>
+            <BorderdBox className="border-yellow-800" title="Trait">
+              {trait}
+            </BorderdBox>
           </div>
           <div className="md:w-3/6 lg:w-3/12">
-            <BorderdBox title="Bond">{bond}</BorderdBox>
+            <BorderdBox className="border-yellow-800" title="Bond">
+              {bond}
+            </BorderdBox>
           </div>
           <div className="md:w-3/6 lg:w-3/12">
-            <BorderdBox title="Ideal">{ideal}</BorderdBox>
+            <BorderdBox className="border-yellow-800" title="Ideal">
+              {ideal}
+            </BorderdBox>
           </div>
           <div className="md:w-3/6 lg:w-3/12">
-            <BorderdBox title="Flaw">{flaw}</BorderdBox>
+            <BorderdBox className="border-yellow-800" title="Flaw">
+              {flaw}
+            </BorderdBox>
           </div>
         </div>
         <SectionTitle title="Organisations" />
         <div className="flex flex-row flex-wrap w-full">
           <div className="sm:w-2/5">
-            <BorderdBox title="Allies">{organisations.allies.join(', ')}</BorderdBox>
+            <BorderdBox className="border-yellow-800" title="Allies">
+              {organisations.allies.join(', ')}
+            </BorderdBox>
           </div>
           <div className="sm:w-2/5">
-            <BorderdBox title="Enemies">{organisations.enemies}</BorderdBox>
+            <BorderdBox className="border-yellow-800" title="Enemies">
+              {organisations.enemies}
+            </BorderdBox>
           </div>
           <div className="sm:w-1/5">
-            <BorderdBox title="Faction">{faction}</BorderdBox>
+            <BorderdBox className="border-yellow-800" title="Faction">
+              {faction}
+            </BorderdBox>
           </div>
         </div>
       </div>

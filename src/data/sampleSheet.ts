@@ -168,7 +168,7 @@ const sampleCharacterSheet: ICharacterSheet = {
     flaw:
       'I secretly always wanted to know what happened to my father, and I want to see him or his family once.',
     organisations: {
-      allies: [],
+      allies: ['Harpers', 'Minins'],
       enemies: []
     },
     faction: undefined
