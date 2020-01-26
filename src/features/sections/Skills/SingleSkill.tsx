@@ -9,7 +9,7 @@ interface ISingleSkillProps {
 
 const SingleSkill: FC<ISingleSkillProps> = ({ skillName, borderClass, sign, skillModifier }) => {
   return (
-    <div className="w-full sm:w-1/3 md:w-1/4">
+    <div className="w-2/4 sm:w-1/3 md:w-1/4 lg:w-1/5">
       <div
         className="flex justify-between items-baseline p-1 m-1 md:px-2 lg:px-4
             bg-orange-600 text-gray-900 capitalize shadow-md"

@@ -6,7 +6,7 @@ interface IConditionsProps {
 
 const Conditions: FC<IConditionsProps> = ({ conditions }) => {
   return (
-    <div className="md:w-2/6 capitalize flex flex-col items-center">
+    <>
       <strong>Conditions</strong>
       <ul className="text-left" style={{ columns: 2 }}>
         {Object.keys(conditions)?.map(thing => {
@@ -14,7 +14,7 @@ const Conditions: FC<IConditionsProps> = ({ conditions }) => {
           return <>{conditions[thing] === true && <li>{thing}</li>}</>;
         })}
       </ul>
-    </div>
+    </>
   );
 };
 

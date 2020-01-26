@@ -28,13 +28,13 @@ const Skills: FC<ISkillsProps> = ({ abilities, skills, proficiencyBonus, passive
         Skills
       </span>
       <div className="flex flex-col w-full">
-        <div className="flex flex-row">
+        <div className="flex flex-row flex-wrap">
           {Object.keys(abilities)?.map(abiltyName => (
             // @ts-ignore
             <Abilty title={abiltyName} abilty={abilities[abiltyName]} />
           ))}
         </div>
-        <div className="flex flex-col sm:flex-row flex-wrap pt-2">
+        <div className="flex xs:flex-col sm:flex-row flex-wrap pt-2">
           <SkillsPoints abilities={abilities} skills={skills} proficiencyBonus={proficiencyBonus} />
         </div>
       </div>

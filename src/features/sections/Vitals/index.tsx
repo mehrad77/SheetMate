@@ -29,14 +29,16 @@ const Vitals: FC<IVitalsProps> = ({ maxHP, currentHP, tempHP, hitDice, deathSave
       >
         Vitals
       </span>
-      <div className="flex flex-row w-full">
-        <Conditions conditions={things} />
-        <div className="md:w-2/6 flex flex-col py-2 justify-center items-center">
+      <div className="flex flex-col-reverse sm:flex-row w-full">
+        <div className="w-full sm:w-2/6 capitalize flex flex-col items-center">
+          <Conditions conditions={things} />
+        </div>
+        <div className="w-full sm:w-2/6 flex flex-col py-2 justify-center items-center">
           <DeathSaves deathSaves={deathSaves} />
           <HitPoint maxHP={maxHP} currentHP={currentHP} />
           <TempHP tempHP={tempHP} />
         </div>
-        <div className="md:w-2/6 flex justify-end">
+        <div className="w-full mb-4 sm:mb-0 sm:w-2/6 flex justify-center sm:justify-end">
           <div>
             <LevelBox title="HitDice" value={hitDice} />
           </div>

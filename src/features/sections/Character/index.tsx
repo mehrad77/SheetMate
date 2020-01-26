@@ -41,10 +41,10 @@ const Character: FC<ICharacterProps> = ({
         Character
       </span>
       <div className="md:w-1/4">
-        <img className="w-48 p-4" src="/bard.png" alt="class icon" />
+        <img className=" mx-auto md:mx-0 w-48 p-4" src="/bard.png" alt="class icon" />
       </div>
       <div className="flex flex-col md:w-3/4">
-        <div className="align-baseline flex justify-between text-left">
+        <div className="align-baseline flex flex-col justify-center sm:flex-row sm:justify-between">
           <h1 className="inline pr-2">{name}</h1>
           <div>
             <LevelBox title="Alignment" value={alignment} />
