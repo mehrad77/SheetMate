@@ -1,4 +1,5 @@
 import { ICharacterSheet } from '../datatypes';
+import { WeaponName } from './weapons';
 
 const sampleCharacterSheet: ICharacterSheet = {
   character: {
@@ -42,6 +43,9 @@ const sampleCharacterSheet: ICharacterSheet = {
       stunned: false,
       unconscious: false
     }
+  },
+  gears: {
+    weapons: [WeaponName.Dagger, WeaponName.LightCrossbow]
   },
   skills: {
     abilities: {

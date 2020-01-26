@@ -1,15 +1,17 @@
 import { ICharacter } from './ICharacter';
 import { IMoney } from './IMoney';
+import { IGears } from './IGears';
 import { IVitals } from './IVitals';
 import { ISkils } from './ISkils';
 import { IBackground } from './IBackground';
+import { IWeapon } from './IWeapon';
 
 interface ICharacterSheet {
   character: ICharacter;
   money: IMoney;
   // 2. class feature section
   vitals: IVitals;
-  // 4. gears section
+  gears: IGears;
   skills: ISkils;
   // 6. money
   // 7. equipment
@@ -21,4 +23,4 @@ interface ICharacterSheet {
 }
 
 // @ts-ignore
-export { ICharacterSheet, ICharacter, IMoney, IVitals, ISkils, IBackground };
+export { ICharacterSheet, ICharacter, IMoney, IVitals, ISkils, IBackground, IWeapon };
