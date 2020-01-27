@@ -3,6 +3,7 @@ import { IMoney } from './IMoney';
 import { IGears } from './IGears';
 import { IVitals } from './IVitals';
 import { ISkils } from './ISkils';
+import { IFeat } from './IFeats';
 import { IBackground } from './IBackground';
 import { IWeapon } from './IWeapon';
 
@@ -16,11 +17,11 @@ interface ICharacterSheet {
   // 6. money
   // 7. equipment
   // 8. attuned
-  // 9. feats
+  feats: IFeat[];
   background: IBackground;
   // 11. Cantrips
   // 12. Spells
 }
 
 // @ts-ignore
-export { ICharacterSheet, ICharacter, IMoney, IVitals, ISkils, IBackground, IWeapon };
+export { ICharacterSheet, ICharacter, IMoney, IVitals, ISkils, IBackground, IWeapon, IFeat };

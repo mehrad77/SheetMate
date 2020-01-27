@@ -50,6 +50,68 @@ const sampleCharacterSheet: ICharacterSheet = {
     ac: 14,
     armomr: 'Studded Leather'
   },
+  feats: [
+    {
+      type: 'Class',
+      name: 'Proficiency',
+      note: `
+      Flute
+      Pan Flute
+      Lute
+      Stealth
+      Perception
+      Persuasion`
+    },
+    {
+      type: 'Class',
+      name: 'Spellcasting',
+      note: `You can cast known bard spells using CHA as your spellcasting modifier (Spell DC 14, Spell Attack +6) and known bard spells as rituals if they have the ritual tag. You can use a musical instrument as a spellcasting focus.`
+    },
+    {
+      type: 'Class',
+      name: 'Bardic Inspiration',
+      note: `As a bonus action, a creature (other than you) within 60 ft. that can hear you gains an inspiration die (1d6). For 10 minutes, the creature can add it to one ability check, attack roll, or saving throw. This can be added after seeing the roll, but before knowing the outcome. You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest.`
+    },
+    {
+      type: 'Class',
+      name: 'Jack of All Trades',
+      note: `You can add half your proficiency bonus, rounded down ( +1 ), to any ability check you make that doesn’t already include it.`
+    },
+    {
+      type: 'Class',
+      name: 'Song of Rest',
+      note: `If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest by spending one or more Hit Dice, each of those creatures regains an extra 1d6 hit points.`
+    },
+    {
+      type: 'Class',
+      name: 'Expertise',
+      note: `Your proficiency bonus is doubled for any ability check you make with chosen proficiencies (2 at 3rd and 10th level). Stealth
+      Performance`
+    },
+    {
+      type: 'Class',
+      name: 'Cutting Words',
+      note: `As a reaction when a creature (that's not immune to being charmed) you can see within 60 ft. makes an attack roll, ability check, or damage roll, you can expend one use of Bardic Inspiration, roll the die, and subtract the number from the creature's roll. You can do so after the roll but before knowing the result.
+      Cutting Words: 1 Reaction`
+    },
+    {
+      type: 'Racial',
+      name: 'Darkvision',
+      note: `You can see in darkness (shades of gray) up to 60 ft.`
+    },
+    {
+      type: 'Racial',
+      name: 'Fey Ancestry',
+      note: `You have advantage on saving throws against being charmed, and magic can’t put you to sleep.`
+    },
+    {
+      type: 'Racial',
+      name: 'Skill Versatility',
+      note: `You gain proficiency in two skills of your choice.
+      Intimidation
+      Performance`
+    }
+  ],
   skills: {
     abilities: {
       STR: {
